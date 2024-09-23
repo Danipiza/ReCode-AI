@@ -1,0 +1,3 @@
+[submodule "1_ML/Reinforcement_Learning"]
+	path = 1_ML/Reinforcement_Learning
+	url = https://github.com/Danipiza/Games-AI.git
