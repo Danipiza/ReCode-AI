@@ -8,6 +8,8 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.layers import BatchNormalization # type: ignore
 from tensorflow.keras.utils import to_categorical # type: ignore
 
+from keras.callbacks import Callback
+
 
 """ONE-HOT
 Encoding labels to one-hot format is a process commonly used
@@ -215,6 +217,21 @@ class Neural_Network():
                        validation_split=validation_split)
 
     """
+    Train the model. and STORE the training results
+    """
+    def train_model_callbacks(self, images, labels, 
+                    epochs, batch_size, validation_split,
+                    log_file):
+        
+        accuracy_logger=AccuracyLogger(log_file)
+
+        
+        self.model.fit(images, labels, 
+                  epochs=epochs, batch_size=batch_size, 
+                  validation_split=validation_split, 
+                  callbacks=[accuracy_logger])
+
+    """
     Evaluation of the model.
     
     Args:
@@ -264,6 +281,94 @@ def main():
     ditectory='images_0'  
     nn.evaluation(ditectory)
 
+"""
+Class to store the printing results of keras library.
+
+    "Epoch _, Accuracy: _, Validation Accuracy: _"
+"""
+class AccuracyLogger(Callback):
+    def __init__(self, filename):
+        super(AccuracyLogger, self).__init__()
+        self.filename=filename
+
+    def on_epoch_end(self, epoch, logs=None):
+        accuracy=logs.get('accuracy')
+        val_accuracy=logs.get('val_accuracy')
+        
+        with open(self.filename, 'a') as f:
+            f.write(f'Epoch {epoch + 1}, Accuracy: {accuracy:.4f}, Validation Accuracy: {val_accuracy:.4f}\n')
 
 
-main()
+def search_main():
+    
+    epoch=50
+    validation_splits=[0.01,0.005]
+    batch_sizes=[16,32,64]
+    for validation_split in validation_splits:
+        for batch_size in batch_sizes:
+            directory='images'
+            nn=Neural_Network()    
+
+        
+            
+            images, labels = nn.load_data(directory)
+
+            # Add color channel for grayscale 
+            images=np.expand_dims(images, axis=-1)  
+            labels=nn.encode_labels(labels) # one-hot
+
+            log_file='models/search/files/captcha_{}_{}_{}.txt'.format(
+                epoch,validation_split,batch_size)
+            
+            nn.train_model_callbacks(images, labels, 
+                epochs=epoch, batch_size=batch_size,
+                validation_split=validation_split,
+                log_file=log_file)
+            
+                            
+            nn.model.save('models/search/keras/captcha_{}_{}_{}.keras'.format(
+                epoch,validation_split,batch_size))
+
+            print("Model trained and saved successfully.\n")
+            
+            # evaluation
+            ditectory='images_0'  
+            nn.evaluation(ditectory)
+
+    epochs=[100,200]
+    validation_splits=[0.2,0.1,0.05,0.01,0.005]
+    batch_sizes=[16,32,64]
+
+    for epoch in epochs:
+        for validation_split in validation_splits:
+            for batch_size in batch_sizes:
+                directory='images'
+                nn=Neural_Network()    
+
+            
+                
+                images, labels = nn.load_data(directory)
+
+                # Add color channel for grayscale 
+                images=np.expand_dims(images, axis=-1)  
+                labels=nn.encode_labels(labels) # one-hot
+
+                log_file='models/search/files/captcha_{}_{}_{}.txt'.format(
+                    epoch,validation_split,batch_size)
+                
+                nn.train_model_callbacks(images, labels, 
+                    epochs=epoch, batch_size=batch_size,
+                    validation_split=validation_split,
+                    log_file=log_file)
+                
+                                
+                nn.model.save('models/search/keras/captcha_{}_{}_{}.keras'.format(
+                    epoch,validation_split,batch_size))
+
+                print("Model trained and saved successfully.\n")
+                
+                # evaluation
+                ditectory='images_0'  
+                nn.evaluation(ditectory)
+
+search_main()

@@ -1,0 +1,10 @@
+Epoch 1, Accuracy: 0.0189, Validation Accuracy: 0.0000
+Epoch 2, Accuracy: 0.0113, Validation Accuracy: 0.0000
+Epoch 3, Accuracy: 0.0161, Validation Accuracy: 0.0000
+Epoch 4, Accuracy: 0.0123, Validation Accuracy: 0.0000
+Epoch 5, Accuracy: 0.0151, Validation Accuracy: 0.0000
+Epoch 6, Accuracy: 0.0094, Validation Accuracy: 0.0000
+Epoch 7, Accuracy: 0.0142, Validation Accuracy: 0.0000
+Epoch 8, Accuracy: 0.0208, Validation Accuracy: 0.0000
+Epoch 9, Accuracy: 0.0142, Validation Accuracy: 0.0000
+Epoch 10, Accuracy: 0.0085, Validation Accuracy: 0.0000
