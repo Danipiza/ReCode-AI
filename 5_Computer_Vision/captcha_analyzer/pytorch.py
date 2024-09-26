@@ -188,6 +188,7 @@ def train(model, dataloader, criterion, optimizer, num_epochs):
             outputs_flat =outputs.unsqueeze(1).expand(-1, CAPTCHA_LEN, -1).reshape(-1, outputs.size(-1))  # Shape: [60, 62]
             # flattens the labels from [12, 5] to [60],
             labels_flat  =labels.view(-1)  # Shape: [60]
+            
 
             
             """# check shapes
@@ -208,23 +209,64 @@ def train(model, dataloader, criterion, optimizer, num_epochs):
 
 
 
-
-
 """
-Evaluation function
+Evaluation function.
+
+Args:
+    model (CNN)             : Neural network.
+    dataloader (DataLoader) : Dataloader with all the images.
+    characters (string)     : All possibles characters.
 """
-def evaluate():
-    """TODO"""
+def evaluate(model, dataloader, characters):
+    model.eval()  # model - evaluation mode
+    correct=0
+    total=0
+
+    with torch.no_grad():  # disable gradient calculation
+        for images, labels in dataloader:
+            
+            # Forward pass
+            output=model(images)
+            
+            # process outputs (same as training)
+            outputs_flat=output.unsqueeze(1).expand(-1, CAPTCHA_LEN, -1).reshape(-1, output.size(-1))  
+            labels_flat=labels.view(-1)  
+            
+            # index of the highest value. predicted character
+            _, predicted_indices=torch.max(outputs_flat, 1)
+            
+            # predicted indices to characters
+            predicted_chars =[characters[idx] for idx in predicted_indices.view(-1)]
+            original_chars  =[characters[idx] for idx in labels_flat.view(-1)]
+            
+            # group predictions into batches of '5'
+            predicted_groups = [''.join(predicted_chars[i:i + CAPTCHA_LEN]) for i in range(0, len(predicted_chars), CAPTCHA_LEN)]
+            actual_groups = [''.join(original_chars[i:i + CAPTCHA_LEN]) for i in range(0, len(original_chars), CAPTCHA_LEN)]
+            
+            for i in range(len(predicted_groups)):
+                print(f"Predicted: {predicted_groups[i]}, Original: {actual_groups[i]}")
+
+            # calculate accuracy
+            for i in range(5):
+                if predicted_indices[i]==labels_flat[i]: correct+=1
+                        
+            #correct +=(predicted_indices==labels_flat).sum().item()
+            total+=5
+
+    accuracy=correct/total*100
+    print(f"Accuracy: {accuracy:.2f}%")
+
 
 
 
 
 def main():
-    idx=0
+    idx=2
     directory='images_0/'
+    filepath='models/pytorch/model_{}.pth'.format(idx)
 
-    learning_rate=0.001
-    num_epochs=100
+    learning_rate=0.000025
+    num_epochs=25
 
     model       =CNN(num_classes=62)
     dataset     =Captcha_Dataset(directory)
@@ -235,6 +277,12 @@ def main():
     optimizer =optim.Adam(model.parameters(), lr=learning_rate)
     
     train(model, dataloader, criterion, optimizer, num_epochs=num_epochs)
+    torch.save(model.state_dict(), filepath)
+
+    
+    characters=string.ascii_letters+string.digits
+    evaluate(model, dataloader, characters)
+
     
     
 
