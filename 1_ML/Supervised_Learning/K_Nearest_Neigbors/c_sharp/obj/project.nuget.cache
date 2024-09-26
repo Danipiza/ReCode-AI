@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "n7Ye5UePmag=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\Supervised_Learning\\K_Nearest_Neigbors\\c_sharp\\KNN.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.drawing.common\\8.0.8\\system.drawing.common.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
