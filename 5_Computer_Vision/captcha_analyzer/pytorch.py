@@ -172,7 +172,7 @@ def train(model, dataloader, criterion, optimizer, num_epochs):
             # resets the gradients of all model parameters to zero
             #   gradients accumulate by default in PyTorch
             optimizer.zero_grad()
-
+            
             # forward 
             outputs=model(images)  # shape: [12, 62]
             
@@ -185,10 +185,12 @@ def train(model, dataloader, criterion, optimizer, num_epochs):
             # unsqueeze() : Adds an extra dimension to the outputs
             # expand()    : Expands this tensor to repeat the single dimension
             # reshape()   : Flattens the first two dimensions into one. 5*12=60
-            outputs_flat =outputs.unsqueeze(1).expand(-1, CAPTCHA_LEN, -1).reshape(-1, outputs.size(-1))  # Shape: [60, 62]
+            outputs_flat =outputs.unsqueeze(1)#.expand(-1, CAPTCHA_LEN, -1).reshape(-1, outputs.size(-1))  # Shape: [60, 62]
             # flattens the labels from [12, 5] to [60],
             labels_flat  =labels.view(-1)  # Shape: [60]
             
+            print(len(outputs_flat))
+            exit(1)
 
             
             """# check shapes
@@ -225,7 +227,7 @@ def evaluate(model, dataloader, characters):
     with torch.no_grad():  # disable gradient calculation
         for images, labels in dataloader:
             
-            # Forward pass
+            # forward pass
             output=model(images)
             
             # process outputs (same as training)
