@@ -23,7 +23,7 @@ class ImageDataset(Dataset):
         self.data     =pd.read_csv(csv_file)
         self.root_dir =root_dir
 
-        self.transform = transform
+        self.transform=transform
 
         # -- Possible categories -------------------------------------------------------
         self.strings=['Trouser', 'Pullover', 'Sneaker', 'Shirt', 'Bag', 

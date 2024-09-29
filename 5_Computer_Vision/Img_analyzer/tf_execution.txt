@@ -1,0 +1,151 @@
+root@DESKTOP-QUMTRDM:/mnt/c/Users/Usuario/Desktop/GITHUB/ReCode-AI/5_Computer_Vision/Img_analyzer# python3 tf.py
+2024-09-29 23:27:59.485019: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-09-29 23:27:59.498304: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-09-29 23:27:59.502445: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-09-29 23:27:59.511798: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-09-29 23:28:00.154070: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1727645280.927176     663 cuda_executor.cc:1001] could not open file to read NUMA node: /sys/bus/pci/devices/0000:08:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2024-09-29 23:28:00.943064: W tensorflow/core/common_runtime/gpu/gpu_device.cc:2343] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+/usr/local/lib/python3.9/dist-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Epoch 1/10
+/mnt/c/Users/Usuario/Desktop/GITHUB/ReCode-AI/5_Computer_Vision/Img_analyzer/tf.py:27: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  image_path = os.path.join(self.root_dir, row[1])
+/mnt/c/Users/Usuario/Desktop/GITHUB/ReCode-AI/5_Computer_Vision/Img_analyzer/tf.py:29: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+  label = self.string_to_idx[row[0]]
+      2/Unknown 1s 320ms/step - accuracy: 0.1800 - loss: 2.28952024-09-29 23:28:02.293996: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+         [[{{node IteratorGetNext}}]]
+/usr/lib/python3.9/contextlib.py:135: UserWarning: Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches. You may need to use the `.repeat()` function when building your dataset.
+  self.gen.throw(type, value, traceback)
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 325ms/step - accuracy: 0.2000 - loss: 2.2797
+Epoch 2/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 341ms/step - accuracy: 0.3100 - loss: 2.00282024-09-29 23:28:03.005443: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+         [[{{node IteratorGetNext}}]]
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 344ms/step - accuracy: 0.3133 - loss: 1.9948
+Epoch 3/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 328ms/step - accuracy: 0.3733 - loss: 1.7183
+Epoch 4/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 329ms/step - accuracy: 0.6450 - loss: 1.43492024-09-29 23:28:04.365058: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+         [[{{node IteratorGetNext}}]]
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 333ms/step - accuracy: 0.6333 - loss: 1.4260
+Epoch 5/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 337ms/step - accuracy: 0.6667 - loss: 1.1538
+Epoch 6/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 326ms/step - accuracy: 0.7467 - loss: 0.9281
+Epoch 7/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 321ms/step - accuracy: 0.8267 - loss: 0.7433
+Epoch 8/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 332ms/step - accuracy: 0.8350 - loss: 0.60092024-09-29 23:28:07.058158: I tensorflow/core/framework/local_rendezvous.cc:404] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+         [[{{node IteratorGetNext}}]]
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 336ms/step - accuracy: 0.8333 - loss: 0.5950
+Epoch 9/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 314ms/step - accuracy: 0.8733 - loss: 0.4785
+Epoch 10/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 329ms/step - accuracy: 0.8533 - loss: 0.4037
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 39ms/step
+/mnt/c/Users/Usuario/Desktop/GITHUB/ReCode-AI/5_Computer_Vision/Img_analyzer/tf.py:71: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  correct += int(predicted_class == label)
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 11ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 13ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 12ms/step
+Accuracy on the dataset: 91.00%
