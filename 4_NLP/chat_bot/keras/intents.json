@@ -1,0 +1,28 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": ["Hi", "Hello", "How are you?", "Hey", "Good day", "Hola", "Buenas"],
+            "responses": ["Hello!", "Hey!", "Hi there! How can I assist?"],
+            "context": [""]
+        },           
+        {
+            "tag": "name",
+            "patterns": ["What's your name?", "Who are you?"],
+            "responses": ["I am a chatbot created by Danipiza.", "I'm a Python-based chatbot created by Danipiza."],
+            "context": [""]
+        },   
+        {
+            "tag": "thanks",
+            "patterns": ["Thanks", "Thank you", "That's helpful"],
+            "responses": ["You're welcome!", "Happy to help!", "Anytime!"],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": ["Bye", "See you later", "Goodbye"],
+            "responses": ["Goodbye!", "Take care!", "See you later!"],
+            "context": [""]
+        }
+    ]
+}
