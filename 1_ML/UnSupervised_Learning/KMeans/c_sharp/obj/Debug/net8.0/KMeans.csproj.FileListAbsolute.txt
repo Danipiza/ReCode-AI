@@ -1,0 +1,15 @@
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.sourcelink.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\bin\Debug\net8.0\KMeans.exe
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\bin\Debug\net8.0\KMeans.deps.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\bin\Debug\net8.0\KMeans.runtimeconfig.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\bin\Debug\net8.0\KMeans.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\bin\Debug\net8.0\KMeans.pdb
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\refint\KMeans.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.pdb
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\KMeans.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\KMeans\c_sharp\obj\Debug\net8.0\ref\KMeans.dll
