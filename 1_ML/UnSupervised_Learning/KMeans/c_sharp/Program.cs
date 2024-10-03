@@ -1,5 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Globalization; // Import this namespace for CultureInfo
+
+using ML_Utilities;
+/*
+<ItemGroup>    
+    <Compile Include="../../../ml_utils.cs" />
+</ItemGroup>
+*/
 
 
 /*
@@ -17,22 +26,29 @@ public class KMeans
 {
     private int k;
     private List<double[]> population;
+    
+    //           input1  , input2  , output
     private Func<double[], double[], double> func;
-    private bool print;
+
+    
     private int d; // dimension of each individual
     private int n; // number of individuals
 
-    public KMeans(int k, List<double[]> population, Func<double[], double[], double> func, bool print)
+    private bool print;
+
+    public KMeans(int k, List<double[]> population, 
+        Func<double[], double[], double> func, bool print)
     {
         this.k=k;
         
-        this.population =population;
-        this.d          =population[0].Length;
+        this.population =population;        
+        this.d          =population[0].Length;        
         this.n          =population.Count;
 
         this.func=func;
-
         this.print=print;
+        
+        
         
 
         if (this.k>this.n)
@@ -184,18 +200,20 @@ public class KMeans
 // euclidean distance 
 public static class Utils
 {
-    public static double EuclideanDistance(double[] point1, double[] point2)
+    public static double EuclideanDistance(double[] a, double[] b)
     {
-        int n=point1.Length;
+        int n=a.Length;
+        
         double sum=0;
-
-
         for (int i=0;i<n;i++)
         {
-            sum+=Math.Pow(point1[i]-point2[i], 2);
+            sum+=Math.Pow(a[i]-b[i], 2);
         }
+         
         return Math.Sqrt(sum);
     }
+
+    
 }
 
 public static class KMeansUtils
@@ -264,34 +282,7 @@ public static class KMeansUtils
         return ret/k;
     }
 
-    /*
-    Davies-Bouldin index.
-
-    DB=(1/k)*Sum(i=1&&i!=j -> k)[max((avg_distance(i,centroid[i])+
-                                    avg_distance(i,centroid[i])/
-                                    (centroids_distance(i,j)))]
-
-    Args:
-        population (float[][]) : Population with all the individuals.
-        assignment (int[])     : Assignment of categories for each individual.
-        k (int)                : Number of clusters.
-        centroids (float[][])  : Centroids of each cluster.
-    */
-    public static int CalculateBestDB(List<double> DBs)
-    {
-        int ret=0;
-        double minValue=DBs[0];
-        for (int i=1;i<DBs.Count;i++)
-        {
-            if (DBs[i]<minValue)
-            {
-                minValue=DBs[i];
-                ret=i;
-            }
-        }
-        return ret;
-    }
-
+    
     /*
     The evaluation function calculates the cuadratic sum of the distances 
     of each individual with its cluster centroid. Euclidean distance.
@@ -303,8 +294,9 @@ public static class KMeansUtils
     */
     public static double Evaluation(List<double[]> population, int[] assignment, List<double[]> centroids)
     {
-        double ret=0.0;
         int n=population.Count;
+
+        double ret=0.0;        
         for (int i=0;i<n;i++)
         {
             ret+=Utils.EuclideanDistance(population[i], centroids[assignment[i]]);
@@ -321,7 +313,9 @@ public static class KMeansUtils
         k (int)                : Number of clusters.
         func (function)        : Euclidean or Manhattan distance.
     */
-    public static (int[], List<double[]>) ExecuteAlgorithm(List<double[]> population, int k, Func<double[], double[], double> func)
+    public static (int[], List<double[]>) ExecuteAlgorithm(
+        List<double[]> population, int k, 
+        Func<double[], double[], double> func)
     {
         KMeans km=new KMeans(k, population, func, false);
 
@@ -372,15 +366,22 @@ public static class KMeansUtils
             Console.WriteLine($"K: {k}\tBest eval: {bestEval}");
         }
 
-        // Davies-Bouldin calculations
-        List<double> DBs=new List<double>();
+        // Davies-Bouldin calculations        
+        int index=0;
+        double db, bestDB=double.MaxValue;
         for (int i=2;i<=maxClust;i++)
         {
-            DBs.Add(DaviesBouldin(population, i, bests[i-1], bestsCentroids[i-1]));
+            db=DaviesBouldin(population, i, bests[i-1], bestsCentroids[i-1]);
+            if(bestDB>db)   
+            {
+                bestDB=db;
+                index=i;
+            }
+            Console.WriteLine($"Davies Bouldin index (K={i}): {db}");            
         }
 
-        int bestDB = CalculateBestDB(DBs);
-        Console.WriteLine($"Best number of clusters: {bestDB+1}");
+         
+        Console.WriteLine($"Best number of clusters: {index}");
     }
 }
 
@@ -392,12 +393,14 @@ class Program
         List<double[]> population=new List<double[]>();
 
         // Example data loading function would be needed (not provided in original code)
-        // Example: population = Utils.ReadPopulation("filename");
+        string filename="100_1_2D";
+        population = Functions.ReadPopulation(filename,"clusters", 2);
 
         int k=4;
 
         // Example using Euclidean distance function
         Func<double[], double[], double> func=Utils.EuclideanDistance;
         KMeansUtils.ExecuteSearch(population, k, 8, func);
+        //KMeansUtils.ExecuteAlgorithm(population, 4, func);
     }
 }
