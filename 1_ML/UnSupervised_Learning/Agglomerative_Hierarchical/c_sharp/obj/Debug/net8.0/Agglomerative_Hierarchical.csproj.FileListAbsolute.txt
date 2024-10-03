@@ -1,0 +1,15 @@
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.sourcelink.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\bin\Debug\net8.0\Agglomerative_Hierarchical.exe
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\bin\Debug\net8.0\Agglomerative_Hierarchical.deps.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\bin\Debug\net8.0\Agglomerative_Hierarchical.runtimeconfig.json
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\bin\Debug\net8.0\Agglomerative_Hierarchical.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\bin\Debug\net8.0\Agglomerative_Hierarchical.pdb
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\refint\Agglomerative_Hierarchical.dll
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.pdb
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\Agglomerative_Hierarchical.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\GITHUB\ReCode-AI\1_ML\UnSupervised_Learning\Agglomerative_Hierarchical\c_sharp\obj\Debug\net8.0\ref\Agglomerative_Hierarchical.dll

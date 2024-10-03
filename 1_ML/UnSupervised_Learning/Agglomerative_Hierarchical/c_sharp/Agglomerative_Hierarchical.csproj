@@ -6,5 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- includes ml_utils.cs file from another directory -->
+    <Compile Include="../../../ml_utils.cs" />
+  </ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@ Once the algorithm finalize, an interface shows the assignment of:
 """
 
 """
-Calculates de Euclidean distance of 
+Calculates the Euclidean distance of 
     two points in a 'd' dimensional space.
 
 Args:
@@ -31,7 +31,7 @@ def euclidean_distance(a, b):
     return math.sqrt(ret)
 
 """
-Calculates de Manhattan distance of 
+Calculates the Manhattan distance of 
     two points in a 'd' dimensional space.
 
 Args:
@@ -44,7 +44,7 @@ def manhattan_distance(a, b):
     for i in range(d):
         ret+=abs(a[i]-b[i])
 
-    return math.sqrt(ret)
+    return ret
 
 
 """
@@ -56,6 +56,8 @@ The format of the file has to be as follows:
 
 Args:
     file_name (string) : Name of the file that is going to be readed.
+    algorithm (string) : Type of directory.
+    d (int)            : Number of variables per individual.
 
 Return:
     ret (float[][]) : Individuals of the population.

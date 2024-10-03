@@ -70,7 +70,7 @@ class AgglomerativeHierarchical:
         
         # -- return variables --------------------------------------------------
         assignment=[[] for _ in range(self.C)]
-        centroids=[[] for _ in range(self.C)]
+        centroids =[[] for _ in range(self.C)]
         
         
         
@@ -83,7 +83,7 @@ class AgglomerativeHierarchical:
             distMin=float("inf")            
             for i in range(len(M)):
                 for j in range(i+1,len(M[0])):
-                    if distMin>=M[i][j]: 
+                    if distMin>M[i][j]: 
                         distMin=M[i][j]
                         c1=i
                         c2=j            
@@ -150,8 +150,7 @@ class AgglomerativeHierarchical:
     def execute_link(self):
         
         # -- 1st PHASE: Init Matrix --------------------------------------------        
-        M=[[0 for _ in range(self.n)] for _ in range(self.n-1)]        
-        
+        M=[[0 for _ in range(self.n)] for _ in range(self.n-1)]               
         for i in range(self.n-1):                       
             for j in range(i+1,self.n):
                 M[i][j]=self.func(self.population[i],self.population[j])
@@ -163,7 +162,7 @@ class AgglomerativeHierarchical:
         
         # -- return variables --------------------------------------------------
         assignment=[[] for _ in range(self.C)]
-        centroids=[[] for _ in range(self.C)]
+        centroids =[[] for _ in range(self.C)]
 
         
         # -- 2nd PHASE: Main loop ----------------------------------------------
@@ -195,9 +194,7 @@ class AgglomerativeHierarchical:
             
             # -- delete row ----------------------------------------------------
             # last cluster it is not necessary to delete the row            
-            if c2!=len(M): M.pop(c2)
-            
-            
+            if c2!=len(M): M.pop(c2)                      
             # -- delete column --------------------------------------------------
             for row in M: del row[c2]
             
@@ -384,6 +381,7 @@ def execute(population, C, dist_cluster, func):
 
     AH=AgglomerativeHierarchical(population,C,dist_cluster,func)
     asignaciones, centroids=AH.execute()
+    print(asignaciones)
 
     
     

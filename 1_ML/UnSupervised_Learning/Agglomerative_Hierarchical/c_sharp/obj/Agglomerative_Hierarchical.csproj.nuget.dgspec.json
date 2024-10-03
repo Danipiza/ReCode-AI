@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\c_sharp\\Agglomerative_Hierarchical.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\c_sharp\\Agglomerative_Hierarchical.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\c_sharp\\Agglomerative_Hierarchical.csproj",
         "projectName": "Agglomerative_Hierarchical",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\c_sharp\\Agglomerative_Hierarchical.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\Agglomerative_Hierarchical\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\GITHUB\\ReCode-AI\\1_ML\\UnSupervised_Learning\\Agglomerative_Hierarchical\\c_sharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"

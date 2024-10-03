@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("KMeans")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Agglomerative_Hierarchical")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d2fa26ab9624dc605b9e3f85545f154a5ab3ab3")]
-[assembly: System.Reflection.AssemblyProductAttribute("KMeans")]
-[assembly: System.Reflection.AssemblyTitleAttribute("KMeans")]
+[assembly: System.Reflection.AssemblyProductAttribute("Agglomerative_Hierarchical")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Agglomerative_Hierarchical")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
