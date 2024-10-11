@@ -1,6 +1,6 @@
 import cv2
 
-from object_detection/tf import detect_objects
+from object_detection_tf import detect_objects
 
 def main():
 
